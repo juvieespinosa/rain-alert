@@ -7,8 +7,8 @@ from twilio.http.http_client import TwilioHttpClient
 
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/onecall"
 api_key = "5d1f58d09f7671dae5a0c5f127d351ab"
-account_sid = "ACabd597df73d4fb47f5918c84cdfd07f9"
-auth_token = "ae004d8677cd074f7e6d9707e8f52e99"
+account_sid = "ENTER YOUR ACCOUNT SID FROM TWILIO"
+auth_token = "ENTER YOUR AUTHORIZATION KEY FROM TWILIO"
 
 weather_params = {
     "lat": 37.338207,
@@ -36,8 +36,8 @@ if will_rain:
     message = client.messages \
         .create(
         body="It's going to rain today. Remember to bring an ☔️.",
-        from_='+12283358736',
-        to='+4085091491'
+        from_='ENTER YOUR TWILIO PHONE NUMBER',
+        to='ENTER YOUR PHONE NUMBER'
     )
 
     print(message.status)
